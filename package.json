@@ -1,0 +1,28 @@
+{
+  "name": "do-not-deploy-on-friday",
+  "version": "0.0.0",
+  "description": "GitHub Action to tell you `Don't deploy on Friday!`",
+  "main": "dist/index.js",
+  "repository": "https://github.com/HormCodes/do-not-deploy-on-friday",
+  "author": "Matej 'Horm' Horak <hello@horm.codes>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "tsc --outDir dist",
+    "test": "jest",
+    "release": "semantic-release"
+  },
+  "dependencies": {
+    "@actions/core": "^1.6.0"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@types/jest": "^27.0.3",
+    "jest": "^27.4.5",
+    "prettier": "^2.5.1",
+    "semantic-release": "^18.0.1",
+    "ts-jest": "^27.1.2",
+    "typescript": "^4.5.4"
+  }
+}
