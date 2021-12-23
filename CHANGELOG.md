@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/HormCodes/do-not-deploy-on-friday/compare/v1.0.2...v1.0.3) (2021-12-23)
+
+
+### Bug Fixes
+
+* inconsistent type definitions ([8a4e77d](https://github.com/HormCodes/do-not-deploy-on-friday/commit/8a4e77dc1b693cb7a0348a5932465f7233f8d7ef))
+
 ## [1.0.2](https://github.com/HormCodes/do-not-deploy-on-friday/compare/v1.0.1...v1.0.2) (2021-12-23)
 
 
