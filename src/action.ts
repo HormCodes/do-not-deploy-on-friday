@@ -1,11 +1,7 @@
-import { getInput, setFailed, setOutput, InputOptions } from '@actions/core';
-import { Day } from './types';
+import { getInput, setFailed, setOutput } from '@actions/core';
+import { ActionFactoryInput, Day } from './types';
 
-export function actionFactory(input: {
-  getInput: (name: string, options?: InputOptions) => string;
-  setFailed: (message: string | Error) => void;
-  setOutput: (name: string, value: any) => void;
-}) {
+export function actionFactory(input: ActionFactoryInput) {
   const { getInput, setFailed, setOutput } = input;
   return () => {
     const timezone = getInput('timezone');
