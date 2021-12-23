@@ -1,0 +1,21 @@
+name: "Don't Deploy on Friday!"
+description: "GitHub Action to tell you to not deploy on Friday."
+author: "Matěj 'Horm' Horák (@HormCodes)"
+inputs:
+  timezone:
+    required: false
+    default: UTC
+    description: Timezone to identify the current day.
+outputs:
+  dayName:
+    description: Name of the current day, e.g. Friday.
+  dayIndex:
+    description: Index of the current day, e.g. 5.
+  failed:
+    description: Boolean value representing current day is Friday.
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
+branding:
+  icon: 'calendar'
+  color: 'red'
