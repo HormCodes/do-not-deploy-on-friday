@@ -8,7 +8,8 @@ Insert following step into your GitHub Actions workflow:
 
 ```yaml
 steps:
-- uses: HormCodes/do-not-deploy-on-friday
+  # Replace version by the latest version tag
+- uses: HormCodes/do-not-deploy-on-friday@version
   # See Inputs section below...
   with:
     timezone: Europe/Prague
