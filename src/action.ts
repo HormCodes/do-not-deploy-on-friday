@@ -23,7 +23,7 @@ export function actionFactory(input: {
 
     if (day === Day.Friday) {
       setOutput('failed', true);
-      setFailed('Today is Friday! Wait for next week...');
+      setFailed('Today is Friday! Wait for the next week...');
       return;
     }
 
