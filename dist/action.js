@@ -17,7 +17,7 @@ function actionFactory(input) {
         setOutput('dayName', dayName);
         if (day === types_1.Day.Friday) {
             setOutput('failed', true);
-            setFailed('Today is Friday! Wait for next week...');
+            setFailed('Today is Friday! Wait for the next week...');
             return;
         }
         setOutput('failed', false);
