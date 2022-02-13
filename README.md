@@ -2,6 +2,10 @@
 
 GitHub Action to tell you "Don't deploy on Friday!". This action will fail with an error if the current day in the specified timezone is Friday.
 
+<p align="center">
+    <img src="meme.jpg" alt="Meme" width="350"/>
+</p>
+
 ## Usage
 
 Insert following step into your GitHub Actions workflow:
