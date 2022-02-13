@@ -8,7 +8,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "ncc build src/index.ts --license license.txt",
+    "build": "ncc build src/index.ts --license license.txt --minify",
     "test": "jest",
     "release": "semantic-release"
   },
