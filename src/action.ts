@@ -4,7 +4,7 @@ import { ActionFactoryInput, Day } from './types';
 export function actionFactory(input: ActionFactoryInput) {
   const { getInput, setFailed, setOutput } = input;
   return () => {
-    const timezone = getInput('timezone');
+    const timezone = getInput('timezone') || 'UTC';
 
     if (!isValidTimezone(timezone)) {
       setFailed(`Timezone ${timezone} is not valid.`);
