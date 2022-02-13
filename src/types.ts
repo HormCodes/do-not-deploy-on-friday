@@ -14,4 +14,5 @@ export interface ActionFactoryInput {
   getInput: (name: string, options?: InputOptions) => string;
   setFailed: (message: string | Error) => void;
   setOutput: (name: string, value: any) => void;
+  logInfo: (info: string) => void;
 }

@@ -1,4 +1,4 @@
-import { getInput, setFailed, setOutput } from '@actions/core';
+import { getInput, setFailed, setOutput, info } from '@actions/core';
 import { ActionFactoryInput, Day } from './types';
 
 export function actionFactory(input: ActionFactoryInput) {
@@ -24,6 +24,7 @@ export function actionFactory(input: ActionFactoryInput) {
     }
 
     setOutput('failed', false);
+    info(`Today is ${dayName}, good luck with your deployment!`);
   };
 }
 
@@ -57,4 +58,4 @@ function getLocaleDateString(timezone: string) {
   });
 }
 
-export default actionFactory({ getInput, setFailed, setOutput });
+export default actionFactory({ getInput, setFailed, setOutput, logInfo: info });

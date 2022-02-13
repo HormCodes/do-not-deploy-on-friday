@@ -14,11 +14,12 @@ describe('action functions', () => {
     const setFailed = jest.fn();
     const getInput = jest.fn();
     const setOutput = jest.fn();
+    const logInfo = jest.fn();
 
     it('should return function', () => {
-      expect(actionFactory({ setFailed, getInput, setOutput })).toBeInstanceOf(
-        Function,
-      );
+      expect(
+        actionFactory({ setFailed, getInput, setOutput, logInfo }),
+      ).toBeInstanceOf(Function);
     });
 
     describe('implementation', () => {
@@ -28,7 +29,7 @@ describe('action functions', () => {
         setOutput.mockClear();
       });
 
-      const action = actionFactory({ setFailed, getInput, setOutput });
+      const action = actionFactory({ setFailed, getInput, setOutput, logInfo });
 
       const mockGetInputImplementation = (timezone: string) => {
         return getInput.mockImplementationOnce((inputName) =>
