@@ -21,9 +21,9 @@ steps:
 
 ## Inputs
 
-|  **Name**  | **Required** | **Description**                       | **Default** |
-|:----------:|:------------:|---------------------------------------|:-----------:|
-| `timezone` |   `false`    | Timezone to identify the current day. |     UTC     |
+|  **Name**  | **Required** | **Description**                                                                                                                                                        | **Default** |
+|:----------:|:------------:|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------:|
+| `timezone` |   `false`    | Timezone to identify the current day. All available timezones are listed [here](http://manpages.ubuntu.com/manpages/bionic/man3/DateTime::TimeZone::Catalog.3pm.html). |     UTC     |
 
 ## Outputs
 
