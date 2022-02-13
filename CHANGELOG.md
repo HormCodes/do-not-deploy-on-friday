@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/HormCodes/do-not-deploy-on-friday/compare/v1.0.3...v1.1.0) (2022-02-13)
+
+
+### Features
+
+* add info log when action is successful ([777d3c7](https://github.com/HormCodes/do-not-deploy-on-friday/commit/777d3c7f5242d854958749a69c73bbfcc3a209ce))
+
 ## [1.0.3](https://github.com/HormCodes/do-not-deploy-on-friday/compare/v1.0.2...v1.0.3) (2021-12-23)
 
 

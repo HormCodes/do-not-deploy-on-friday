@@ -21,6 +21,7 @@ function actionFactory(input) {
             return;
         }
         setOutput('failed', false);
+        (0, core_1.info)(`Today is ${dayName}, good luck with your deployment!`);
     };
 }
 exports.actionFactory = actionFactory;
@@ -52,4 +53,4 @@ function getLocaleDateString(timezone) {
         timeZone: timezone,
     });
 }
-exports.default = actionFactory({ getInput: core_1.getInput, setFailed: core_1.setFailed, setOutput: core_1.setOutput });
+exports.default = actionFactory({ getInput: core_1.getInput, setFailed: core_1.setFailed, setOutput: core_1.setOutput, logInfo: core_1.info });
