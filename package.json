@@ -8,7 +8,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "tsc --outDir dist",
+    "build": "ncc build src/index.ts --license license.txt",
     "test": "jest",
     "release": "semantic-release"
   },
@@ -19,6 +19,7 @@
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/git": "^10.0.1",
     "@types/jest": "^27.0.3",
+    "@vercel/ncc": "^0.33.3",
     "jest": "^27.4.5",
     "prettier": "^2.5.1",
     "semantic-release": "^18.0.1",

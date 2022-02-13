@@ -27,7 +27,13 @@
     [
       "@semantic-release/github",
       {
-        "successComment": false
+        "successComment": false,
+        "assets": [
+          "dist/**",
+          "README.md",
+          "action.yml",
+          "LICENSE"
+        ]
       }
     ]
   ]
