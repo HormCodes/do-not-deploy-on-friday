@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/HormCodes/do-not-deploy-on-friday/compare/v1.1.1...v1.1.2) (2022-02-13)
+
+
+### Bug Fixes
+
+* missing GitHub action package ([aabdb99](https://github.com/HormCodes/do-not-deploy-on-friday/commit/aabdb9953573a031f63c8952597636983a49c61e))
+
 ## [1.1.1](https://github.com/HormCodes/do-not-deploy-on-friday/compare/v1.1.0...v1.1.1) (2022-02-13)
 
 
