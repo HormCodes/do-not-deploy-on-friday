@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/HormCodes/do-not-deploy-on-friday/compare/v1.1.2...v1.1.3) (2022-02-13)
+
+
+### Bug Fixes
+
+* remove redundant GitHub release assets ([c221d68](https://github.com/HormCodes/do-not-deploy-on-friday/commit/c221d68f551060c514e9ab2b33687241b35dd3dd))
+
 ## [1.1.2](https://github.com/HormCodes/do-not-deploy-on-friday/compare/v1.1.1...v1.1.2) (2022-02-13)
 
 
