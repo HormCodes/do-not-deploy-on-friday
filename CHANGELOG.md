@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/HormCodes/do-not-deploy-on-friday/compare/v1.1.0...v1.1.1) (2022-02-13)
+
+
+### Bug Fixes
+
+* updating package.json version ([c13f131](https://github.com/HormCodes/do-not-deploy-on-friday/commit/c13f13128a4db5c994f23630e7f4d98309523ea9))
+
 # [1.1.0](https://github.com/HormCodes/do-not-deploy-on-friday/compare/v1.0.3...v1.1.0) (2022-02-13)
 
 
