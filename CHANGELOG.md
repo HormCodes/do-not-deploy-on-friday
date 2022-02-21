@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/HormCodes/do-not-deploy-on-friday/compare/v1.2.0...v1.2.1) (2022-02-21)
+
+
+### Bug Fixes
+
+* **cicd:** release version action ([5ca3b2f](https://github.com/HormCodes/do-not-deploy-on-friday/commit/5ca3b2f649560a839de040f44dbd95ac76e68230))
+
 # [1.2.0](https://github.com/HormCodes/do-not-deploy-on-friday/compare/v1.1.3...v1.2.0) (2022-02-21)
 
 
