@@ -24,7 +24,7 @@ export function actionFactory(input: ActionFactoryInput) {
       return;
     }
 
-    info(`Today is ${dayName}, good luck with your deployment!`);
+    info(`Today is ${dayName}, a good day for deployment. Good luck!`);
   };
 }
 
