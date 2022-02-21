@@ -1,8 +1,9 @@
 name: CD
+
 on:
-  push:
-    branches:
-      - main
+  release:
+    types: [published, edited]
+
 jobs:
   install_deps:
     name: Install dependencies
@@ -38,8 +39,8 @@ jobs:
       - name: Install Dependencies
         run: yarn install --frozen-lockfile --prefer-offline
 
-  release:
-    name: Release Action
+  release_version:
+    name: Release version
     runs-on: ubuntu-latest
     needs: [ install_deps ]
     steps:
@@ -61,8 +62,7 @@ jobs:
       - name: Build action
         run: yarn build
 
-      - name: Release action
+      - name: Create tag version
+      - uses: JasonEtco/build-and-tag-action@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CI: true
-        run: yarn release
+          GITHUB_TOKEN: ${{ github.token }}

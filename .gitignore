@@ -3,3 +3,6 @@
 
 # Node, NPM, Yarn...
 node_modules
+
+# Build
+dist
