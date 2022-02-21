@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/HormCodes/do-not-deploy-on-friday/compare/v1.1.3...v1.2.0) (2022-02-21)
+
+
+### Features
+
+* minimise build output ([60eed25](https://github.com/HormCodes/do-not-deploy-on-friday/commit/60eed25b37367a01a763555c05113c9d76fd14d2))
+
 ## [1.1.3](https://github.com/HormCodes/do-not-deploy-on-friday/compare/v1.1.2...v1.1.3) (2022-02-13)
 
 
