@@ -1,4 +1,4 @@
-import { getInput, setFailed, setOutput, info } from '@actions/core';
+import { getInput, info, setFailed, setOutput } from '@actions/core';
 import { ActionFactoryInput, Day } from './types';
 
 export function actionFactory(input: ActionFactoryInput) {
@@ -13,17 +13,17 @@ export function actionFactory(input: ActionFactoryInput) {
 
     const day = getCurrentDay(timezone);
     const dayName = getDayName(day);
+    const isFriday = day === Day.Friday;
 
     setOutput('dayIndex', day);
     setOutput('dayName', dayName);
+    setOutput('failed', isFriday);
 
-    if (day === Day.Friday) {
-      setOutput('failed', true);
+    if (isFriday) {
       setFailed('Today is Friday! Wait for the next week...');
       return;
     }
 
-    setOutput('failed', false);
     info(`Today is ${dayName}, good luck with your deployment!`);
   };
 }
