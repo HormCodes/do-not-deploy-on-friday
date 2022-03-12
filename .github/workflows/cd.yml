@@ -1,9 +1,8 @@
 name: CD
-
 on:
-  release:
-    types: [created, published, edited]
-
+  push:
+    branches:
+      - main
 jobs:
   install_deps:
     name: Install dependencies
@@ -39,8 +38,8 @@ jobs:
       - name: Install Dependencies
         run: yarn install --frozen-lockfile --prefer-offline
 
-  release_version:
-    name: Release version
+  increment_version:
+    name: Increment Version
     runs-on: ubuntu-latest
     needs: [ install_deps ]
     steps:
@@ -59,10 +58,46 @@ jobs:
           path: node_modules
           key: ${{ runner.os }}-build-${{ env.cache-name }}-v0-${{ hashFiles('**/yarn.lock') }}
 
+      - name: Release action
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CI: true
+        run: yarn release
+
+  release_version:
+    name: Release version
+    runs-on: ubuntu-latest
+    needs: [ increment_version ]
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Cache node modules
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-v0-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Extract tag version
+        id: tag_version
+        run: |
+          export TAG_VERSION=$(node -p "require('./package.json').version")
+          echo "::set-output name=tag_version::$TAG_VERSION"
+
+      - name: Print tag version
+        run: echo ${{ steps.tag_version.outputs.tag_version }}
+
       - name: Build action
         run: yarn build
 
       - name: Create tag version
         uses: JasonEtco/build-and-tag-action@v2
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          tag_name: ${{ steps.tag_version.outputs.tag_version }}
+
