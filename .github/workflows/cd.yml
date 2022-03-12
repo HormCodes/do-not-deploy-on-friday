@@ -100,4 +100,5 @@ jobs:
         uses: JasonEtco/build-and-tag-action@v2
         with:
           tag_name: ${{ steps.tag_version.outputs.tag_version }}
-
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
