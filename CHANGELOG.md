@@ -1,3 +1,10 @@
+## [1.2.4](https://github.com/HormCodes/do-not-deploy-on-friday/compare/v1.2.3...v1.2.4) (2022-03-12)
+
+
+### Bug Fixes
+
+* **cicd:** tag version name ([fb7147b](https://github.com/HormCodes/do-not-deploy-on-friday/commit/fb7147b599257310185a6579016308e72f426164))
+
 ## [1.2.3](https://github.com/HormCodes/do-not-deploy-on-friday/compare/v1.2.2...v1.2.3) (2022-03-12)
 
 
