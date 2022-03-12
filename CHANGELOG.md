@@ -1,3 +1,13 @@
+## [1.2.3](https://github.com/HormCodes/do-not-deploy-on-friday/compare/v1.2.2...v1.2.3) (2022-03-12)
+
+
+### Bug Fixes
+
+* **cicd:** one deployment workflow ([3e0c710](https://github.com/HormCodes/do-not-deploy-on-friday/commit/3e0c710551ca3dcebc8001b8dcec93b50b6ff232))
+* **cicd:** release action trigger events ([266f6d4](https://github.com/HormCodes/do-not-deploy-on-friday/commit/266f6d4cb81bcc844f9902b255e12767edd1eee6))
+* semantic release version tracking ([963e913](https://github.com/HormCodes/do-not-deploy-on-friday/commit/963e9136283d698c6bed24a2234a957110d87726))
+* success note ([af58b9b](https://github.com/HormCodes/do-not-deploy-on-friday/commit/af58b9b5cb06a9c2cfb07257e9fd9b5aff5533c6))
+
 ## [1.2.3](https://github.com/HormCodes/do-not-deploy-on-friday/compare/v1.2.2...v1.2.3) (2022-02-21)
 
 
