@@ -2,7 +2,7 @@ import { getInput, info, setFailed, setOutput } from '@actions/core';
 import { ActionFactoryInput, Day } from './types';
 
 export function actionFactory(input: ActionFactoryInput) {
-  const { getInput, setFailed, setOutput } = input;
+  const { getInput, setFailed, setOutput, logInfo } = input;
   return () => {
     const timezone = getInput('timezone') || 'UTC';
 
@@ -24,7 +24,7 @@ export function actionFactory(input: ActionFactoryInput) {
       return;
     }
 
-    info(`Today is ${dayName}, a good day for deployment. Good luck!`);
+    logInfo(`Today is ${dayName}, a good day for deployment. Good luck!`);
   };
 }
 
