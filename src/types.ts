@@ -13,6 +13,6 @@ export enum Day {
 export interface ActionFactoryInput {
   getInput: (name: string, options?: InputOptions) => string;
   setFailed: (message: string | Error) => void;
-  setOutput: (name: string, value: any) => void;
+  setOutput: (name: string, value: string | boolean | number) => void;
   logInfo: (info: string) => void;
 }

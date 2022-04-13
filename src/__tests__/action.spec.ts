@@ -37,8 +37,6 @@ describe('action functions', () => {
         );
       };
 
-      it('should set day name and index outputs', () => {});
-
       it('should call setFailed for all executions where is Friday', () => {
         mockGetInputImplementation('Europe/Prague');
         action();

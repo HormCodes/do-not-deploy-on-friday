@@ -38,6 +38,29 @@ jobs:
       - name: Install Dependencies
         run: yarn install --frozen-lockfile --prefer-offline
 
+  lint:
+    name: Lint code
+    runs-on: ubuntu-latest
+    needs: [ install_deps ]
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Cache node modules
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-v0-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Run lint
+        run: yarn lint
+
   test:
     name: Run tests
     runs-on: ubuntu-latest
