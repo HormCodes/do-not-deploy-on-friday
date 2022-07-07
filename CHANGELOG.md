@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/HormCodes/do-not-deploy-on-friday/compare/v1.0.1...v1.0.2) (2022-07-07)
+
+
+### Bug Fixes
+
+* upgrade @actions/core from 1.8.2 to 1.9.0 ([4984088](https://github.com/HormCodes/do-not-deploy-on-friday/commit/4984088842e73b51142196744c36a7f17bebf6ea))
+
 ## [1.0.1](https://github.com/HormCodes/do-not-deploy-on-friday/compare/v1.0.0...v1.0.1) (2022-05-25)
 
 
