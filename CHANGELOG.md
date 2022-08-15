@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/HormCodes/do-not-deploy-on-friday/compare/v1.0.2...v1.0.3) (2022-08-15)
+
+
+### Bug Fixes
+
+* package.json & yarn.lock to reduce vulnerabilities ([de231d4](https://github.com/HormCodes/do-not-deploy-on-friday/commit/de231d40c589e166e41a1d0b242d832f7fb9da77))
+
 ## [1.0.2](https://github.com/HormCodes/do-not-deploy-on-friday/compare/v1.0.1...v1.0.2) (2022-07-07)
 
 
