@@ -14,26 +14,7 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '16'
-
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=yarn-cache-dir::$(yarn cache dir)"
-
-      - name: Cache yarn cache
-        uses: actions/cache@v2
-        id: cache-yarn-cache
-        with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.yarn-cache-dir }}
-          key: ${{ runner.os }}-build-${{ env.cache-yarn-cache }}-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-yarn-cache }}
-      - name: Cache node modules
-        uses: actions/cache@v2
-        env:
-          cache-name: cache-node-modules
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-v0-${{ hashFiles('**/yarn.lock') }}
+          cache: "yarn"
 
       - name: Install Dependencies
         run: yarn install --frozen-lockfile --prefer-offline
@@ -49,14 +30,7 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '16'
-
-      - name: Cache node modules
-        uses: actions/cache@v2
-        env:
-          cache-name: cache-node-modules
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-v0-${{ hashFiles('**/yarn.lock') }}
+          cache: "yarn"
 
       - name: Run lint
         run: yarn lint
@@ -72,14 +46,9 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '16'
+          cache: "yarn"
 
-      - name: Cache node modules
-        uses: actions/cache@v2
-        env:
-          cache-name: cache-node-modules
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-v0-${{ hashFiles('**/yarn.lock') }}
+
 
       - name: Run tests
         run: yarn test
@@ -95,15 +64,9 @@ jobs:
 
       - uses: actions/setup-node@v2
         with:
-          node-version: '12'
+          node-version: '16'
+          cache: "yarn"
 
-      - name: Cache node modules
-        uses: actions/cache@v2
-        env:
-          cache-name: cache-node-modules
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-v0-${{ hashFiles('**/yarn.lock') }}
 
       - name: Build action
         run: yarn build
