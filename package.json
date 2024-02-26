@@ -1,6 +1,6 @@
 {
   "name": "do-not-deploy-on-friday",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "GitHub Action to tell you `Don't deploy on Friday!`",
   "main": "dist/index.js",
   "repository": "https://github.com/HormCodes/do-not-deploy-on-friday",
